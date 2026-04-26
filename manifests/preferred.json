@@ -183,13 +183,13 @@
     "deep-equal": {
       "type": "module",
       "moduleName": "deep-equal",
-      "replacements": ["dequal", "util.isDeepStrictEqual"],
+      "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
     "deep-equal-json": {
       "type": "module",
       "moduleName": "deep-equal-json",
-      "replacements": ["dequal", "util.isDeepStrictEqual"],
+      "replacements": ["dequal", "util.isDeepStrictEqual", "Bun.deepEquals"],
       "url": {"type": "e18e", "id": "deep-equal"}
     },
     "depcheck": {
@@ -2918,6 +2918,11 @@
       "type": "native",
       "url": "https://bun.com/docs/runtime/yaml"
     },
+    "Bun.deepEquals": {
+      "id": "Bun.deepEquals",
+      "type": "native",
+      "url": "https://bun.com/docs/runtime/utils#bun-deepequals"
+    },
     "Bun.file": {
       "id": "Bun.file",
       "type": "native",
@@ -2926,12 +2931,12 @@
     "Bun.stringWidth": {
       "id": "Bun.stringWidth",
       "type": "native",
-      "url": "https://bun.com/reference/bun/stringWidth"
+      "url": "https://bun.com/docs/runtime/utils#bun-stringwidth"
     },
     "Bun.stripANSI": {
       "id": "Bun.stripANSI",
       "type": "native",
-      "url": "https://bun.com/reference/bun/stripANSI"
+      "url": "https://bun.com/docs/runtime/utils#bun-stripansi"
     },
     "ClipboardAPI": {
       "id": "ClipboardAPI",
