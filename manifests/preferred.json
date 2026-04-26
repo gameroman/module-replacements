@@ -15,7 +15,7 @@
     "@iarna/toml": {
       "type": "module",
       "moduleName": "@iarna/toml",
-      "replacements": ["smol-toml"],
+      "replacements": ["smol-toml", "Bun.TOML"],
       "url": {"type": "e18e", "id": "toml"}
     },
     "@jsdevtools/ez-spawn": {
@@ -471,7 +471,7 @@
     "js-yaml": {
       "type": "module",
       "moduleName": "js-yaml",
-      "replacements": ["yaml", "YAML"],
+      "replacements": ["yaml", "Bun.YAML"],
       "url": {"type": "e18e", "id": "js-yaml"}
     },
     "jsonwebtoken": {
@@ -2747,7 +2747,7 @@
     "toml": {
       "type": "module",
       "moduleName": "toml",
-      "replacements": ["smol-toml"],
+      "replacements": ["smol-toml", "Bun.TOML"],
       "url": {"type": "e18e", "id": "toml"}
     },
     "traverse": {
@@ -2908,6 +2908,16 @@
       "type": "native",
       "url": "https://bun.com/docs/runtime/shell"
     },
+    "Bun.TOML": {
+      "id": "Bun.TOML",
+      "type": "native",
+      "url": "https://bun.com/docs/runtime/toml"
+    },
+    "Bun.YAML": {
+      "id": "Bun.YAML",
+      "type": "native",
+      "url": "https://bun.com/docs/runtime/yaml"
+    },
     "Bun.file": {
       "id": "Bun.file",
       "type": "native",
@@ -2999,7 +3009,6 @@
       "webFeatureId": {"featureId": "url", "compatKey": "api.URLSearchParams"},
       "url": {"type": "mdn", "id": "Web/API/URLSearchParams"}
     },
-    "YAML": {"id": "YAML", "type": "documented", "replacementModule": "YAML"},
     "ansis": {
       "id": "ansis",
       "type": "documented",
