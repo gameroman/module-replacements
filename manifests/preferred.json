@@ -2331,7 +2331,7 @@
     "meow": {
       "type": "module",
       "moduleName": "meow",
-      "replacements": ["sade"],
+      "replacements": ["sade", "cleye"],
       "url": {"type": "e18e", "id": "cli-builders"}
     },
     "minimist": {
@@ -2711,7 +2711,7 @@
     "yargs": {
       "type": "module",
       "moduleName": "yargs",
-      "replacements": ["sade"],
+      "replacements": ["sade", "cleye"],
       "url": {"type": "e18e", "id": "cli-builders"}
     },
     "yargs-parser": {
@@ -2941,6 +2941,11 @@
       "id": "bun:test",
       "type": "native",
       "url": "https://bun.com/docs/test"
+    },
+    "cleye": {
+      "id": "cleye",
+      "type": "documented",
+      "replacementModule": "cleye"
     },
     "concurrently": {
       "id": "concurrently",
@@ -3187,11 +3192,7 @@
       "type": "documented",
       "replacementModule": "milliparsec"
     },
-    "mri": {
-      "id": "mri",
-      "type": "documented",
-      "replacementModule": "mri"
-    },
+    "mri": {"id": "mri", "type": "documented", "replacementModule": "mri"},
     "nano-staged": {
       "id": "nano-staged",
       "type": "documented",
