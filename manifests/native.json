@@ -1222,6 +1222,18 @@
         "compatKey": "javascript.builtins.String.at"
       }
     },
+    "String.prototype.includes": {
+      "id": "String.prototype.includes",
+      "type": "native",
+      "url": {
+        "type": "mdn",
+        "id": "Web/JavaScript/Reference/Global_Objects/String/includes"
+      },
+      "webFeatureId": {
+        "featureId": "string-includes",
+        "compatKey": "javascript.builtins.String.includes"
+      }
+    },
     "String.prototype.lastIndexOf": {
       "id": "String.prototype.lastIndexOf",
       "type": "native",
@@ -1384,6 +1396,15 @@
       "url": {"type": "mdn", "id": "Web/API/URL"},
       "webFeatureId": {"featureId": "url", "compatKey": "api.URL"}
     },
+    "URL.canParse": {
+      "id": "URL.canParse",
+      "type": "native",
+      "url": {"type": "mdn", "id": "Web/API/URL/canParse_static"},
+      "webFeatureId": {
+        "featureId": "url-canparse",
+        "compatKey": "api.URL.canParse_static"
+      }
+    },
     "WeakMap": {
       "id": "WeakMap",
       "type": "native",
@@ -1427,12 +1448,6 @@
         "id": "api/crypto.html#cryptorandombytessize-callback"
       },
       "nodeFeatureId": {"moduleName": "crypto", "exportName": "randomBytes"}
-    },
-    "crypto.timingSafeEqual": {
-      "id": "crypto.timingSafeEqual",
-      "type": "native",
-      "url": {"type": "node", "id": "api/crypto.html#cryptotimingsafeequala-b"},
-      "nodeFeatureId": {"moduleName": "crypto", "exportName": "timingSafeEqual"}
     },
     "es-errors": {
       "id": "es-errors",
@@ -1499,13 +1514,13 @@
         "type": "node",
         "id": "api/fs.html#fsrealpathpath-options-callback"
       },
-      "nodeFeatureId": {"moduleName": "fs"}
+      "nodeFeatureId": {"moduleName": "fs", "exportName": "realpath"}
     },
     "fs.rm": {
       "id": "fs.rm",
       "type": "native",
       "url": {"type": "node", "id": "api/fs.html#fsrmpath-options-callback"},
-      "nodeFeatureId": {"moduleName": "fs"}
+      "nodeFeatureId": {"moduleName": "fs", "exportName": "rm"}
     },
     "fsPromises": {
       "id": "fsPromises",
@@ -1616,7 +1631,19 @@
       "id": "path.parse",
       "type": "native",
       "url": {"type": "node", "id": "api/path.html#pathparsepath"},
-      "nodeFeatureId": {"moduleName": "path"}
+      "nodeFeatureId": {"moduleName": "path", "exportName": "parse"}
+    },
+    "process.allowedNodeEnvironmentFlags": {
+      "id": "process.allowedNodeEnvironmentFlags",
+      "type": "native",
+      "url": {
+        "type": "node",
+        "id": "api/process.html#processallowednodeenvironmentflags"
+      },
+      "nodeFeatureId": {
+        "moduleName": "process",
+        "exportName": "allowedNodeEnvironmentFlags"
+      }
     },
     "queueMicrotask": {
       "id": "queueMicrotask",
@@ -1887,12 +1914,6 @@
       "type": "module",
       "moduleName": "buffer-crc32",
       "replacements": ["zlib.crc32"]
-    },
-    "buffer-equal-constant-time": {
-      "type": "module",
-      "moduleName": "buffer-equal-constant-time",
-      "replacements": ["crypto.timingSafeEqual"],
-      "url": {"type": "e18e", "id": "buffer-equal-constant-time"}
     },
     "buffer-from": {
       "type": "module",
@@ -2191,6 +2212,11 @@
       "moduleName": "index-of",
       "replacements": ["Array.prototype.indexOf"]
     },
+    "indexof": {
+      "type": "module",
+      "moduleName": "indexof",
+      "replacements": ["Array.prototype.indexOf"]
+    },
     "is-buffer": {
       "type": "module",
       "moduleName": "is-buffer",
@@ -2210,6 +2236,11 @@
       "type": "module",
       "moduleName": "is-nan",
       "replacements": ["Number.isNaN"]
+    },
+    "is-url-superb": {
+      "type": "module",
+      "moduleName": "is-url-superb",
+      "replacements": ["URL.canParse"]
     },
     "isarray": {
       "type": "module",
@@ -2245,6 +2276,46 @@
       "type": "module",
       "moduleName": "left-pad",
       "replacements": ["String.prototype.padStart"]
+    },
+    "lodash.isarray": {
+      "type": "module",
+      "moduleName": "lodash.isarray",
+      "replacements": ["Array.isArray"]
+    },
+    "lodash.isbuffer": {
+      "type": "module",
+      "moduleName": "lodash.isbuffer",
+      "replacements": ["Buffer.isBuffer"]
+    },
+    "lodash.iserror": {
+      "type": "module",
+      "moduleName": "lodash.iserror",
+      "replacements": ["Error.isError"]
+    },
+    "lodash.isfinite": {
+      "type": "module",
+      "moduleName": "lodash.isfinite",
+      "replacements": ["Number.isFinite"]
+    },
+    "lodash.isinteger": {
+      "type": "module",
+      "moduleName": "lodash.isinteger",
+      "replacements": ["Number.isInteger"]
+    },
+    "lodash.isnan": {
+      "type": "module",
+      "moduleName": "lodash.isnan",
+      "replacements": ["Number.isNaN"]
+    },
+    "lodash.join": {
+      "type": "module",
+      "moduleName": "lodash.join",
+      "replacements": ["Array.prototype.join"]
+    },
+    "lodash.lastindexof": {
+      "type": "module",
+      "moduleName": "lodash.lastindexof",
+      "replacements": ["Array.prototype.lastIndexOf"]
     },
     "long": {
       "type": "module",
@@ -2310,6 +2381,11 @@
       "type": "module",
       "moduleName": "native-promise-only",
       "replacements": ["Promise"]
+    },
+    "node-environment-flags": {
+      "type": "module",
+      "moduleName": "node-environment-flags",
+      "replacements": ["process.allowedNodeEnvironmentFlags"]
     },
     "node-int64": {
       "type": "module",
@@ -2526,6 +2602,11 @@
       "moduleName": "string.prototype.at",
       "replacements": ["String.prototype.at"]
     },
+    "string.prototype.includes": {
+      "type": "module",
+      "moduleName": "string.prototype.includes",
+      "replacements": ["String.prototype.includes"]
+    },
     "string.prototype.lastindexof": {
       "type": "module",
       "moduleName": "string.prototype.lastindexof",
@@ -2615,6 +2696,11 @@
       "type": "module",
       "moduleName": "to-buffer",
       "replacements": ["Buffer.from"]
+    },
+    "trim": {
+      "type": "module",
+      "moduleName": "trim",
+      "replacements": ["String.prototype.trim"]
     },
     "typed-array-buffer": {
       "type": "module",
