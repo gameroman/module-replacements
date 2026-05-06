@@ -2594,6 +2594,12 @@
       "replacements": ["readline.createInterface"],
       "url": {"type": "e18e", "id": "split"}
     },
+    "sqlite3": {
+      "type": "module",
+      "moduleName": "sqlite3",
+      "replacements": ["node:sqlite", "better-sqlite3"],
+      "url": {"type": "e18e", "id": "sqlite3"}
+    },
     "stream-buffers": {
       "type": "module",
       "moduleName": "stream-buffers",
@@ -2946,6 +2952,11 @@
       "type": "documented",
       "replacementModule": "bcryptjs"
     },
+    "better-sqlite3": {
+      "id": "better-sqlite3",
+      "type": "documented",
+      "replacementModule": "better-sqlite3"
+    },
     "betterknown": {
       "id": "betterknown",
       "type": "documented",
@@ -2988,10 +2999,7 @@
     "crypto.timingSafeEqual": {
       "id": "crypto.timingSafeEqual",
       "type": "native",
-      "url": {
-        "type": "node",
-        "id": "api/crypto.html#cryptotimingsafeequala-b"
-      },
+      "url": {"type": "node", "id": "api/crypto.html#cryptotimingsafeequala-b"},
       "nodeFeatureId": {"moduleName": "crypto", "exportName": "timingSafeEqual"}
     },
     "date-fns": {
@@ -3266,6 +3274,12 @@
       "id": "node:fs",
       "type": "documented",
       "replacementModule": "node:fs"
+    },
+    "node:sqlite": {
+      "id": "node:sqlite",
+      "type": "native",
+      "nodeFeatureId": {"moduleName": "node:sqlite"},
+      "url": {"type": "node", "id": "api/sqlite.html"}
     },
     "node:stream": {
       "id": "node:stream",
